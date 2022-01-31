@@ -1,2 +1,2 @@
 # IT162-Winter22
-IT 162 project
+Web Authoring 2 class portal page for all class assignments. 
