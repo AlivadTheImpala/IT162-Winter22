@@ -1,0 +1,140 @@
+html {
+  background-color: #1c1d1d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main.wrapper {
+  background-color: #e1f2ea;
+  overflow: auto;
+  border-radius: 2em;
+}
+
+h1 > a {
+  text-decoration: none;
+  color: #5d5e5e;
+}
+.logo {
+  color: #5d5e5e;
+  margin-left: 1%;
+  font-size: 1.25em;
+}
+
+section a,
+aside a,
+footer a {
+  text-decoration: none;
+  color: #20a3fa;
+}
+section a:hover,
+aside a:hover,
+footer a:hover {
+  background-color: #dea47c;
+  color: #e1f2ea;
+}
+
+/* Embed Responsively Rules! */
+div.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: auto;
+  max-width: 98%;
+}
+
+div.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  padding: 1em;
+}
+
+/* START RESPONSIVE STYLES */
+
+/* DESKTOP */
+@media all and (min-width: 1400px) {
+  main.wrapper {
+    width: 85%;
+    margin: auto;
+  }
+  /* Left column */
+  section {
+    width: 65%;
+    float: left;
+  }
+
+  /* Right Column */
+  aside {
+    width: 35%;
+    float: right;
+  }
+
+  img.desktop {
+    float: left;
+    width: 50%;
+  }
+
+  img.tablet,
+  img.phone {
+    display: none;
+  }
+
+  /* Change background color of navigation on selected page */
+  ul.topnav li a.selected {
+    background-color: #dea47c;
+    color: #e1f2ea;
+  }
+}
+
+/* TABLET */
+@media all and (min-width: 737px) and (max-width: 1399px) {
+  section {
+    width: 60%;
+    float: left;
+  }
+
+  aside {
+    width: 40%;
+    float: right;
+  }
+
+  img.tablet {
+    width: 100%;
+    display: inline-block;
+  }
+
+  img.desktop,
+  img.phone {
+    display: none;
+  }
+
+  /* Change background color of navigation on selected page */
+  ul.topnav li a.selected {
+    background-color: #dea47c;
+    color: #e1f2ea;
+  }
+}
+
+/* PHONE */
+@media all and (max-width: 736px) {
+  img.phone {
+    width: 100%;
+    display: inline-block;
+  }
+
+  img.tablet,
+  img.desktop {
+    display: none;
+  }
+  ul.topnav li a.selected {
+    background-color: #dea47c;
+    color: #e1f2ea;
+  }
+}
