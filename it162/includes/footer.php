@@ -1,17 +1,16 @@
 <footer>
         <p>
           <small
-            >&copy; 2022 by <a href="contact.php">Brandon Davila</a>, All Rights
-            Reserved ~
-            <a id="html-checker" href="#">Check HTML</a>
-            ~
+            >&copy; 2022-<?=date("Y")?>
+            by <a href="contactme.php">Brandon Davila</a>, All Rights Reserved ~
+            <a id="html-checker" href="#">Check HTML</a> ~
             <a id="css-checker" href="#">Check CSS</a></small
           >
         </p>
-      </footer>
-    </div>
-
-    <!-- Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon -->
+</footer>
+      <!-- END Footer -->
+    </main>
+    <!-- END WRAPPER -->
 
     <script>
       //https://tinyurl.com/dynamic-html-checker
@@ -21,7 +20,6 @@
           "href",
           "https://validator.w3.org/nu/?doc=" + location.href
         );
-
       document
         .getElementById("css-checker")
         .setAttribute(
@@ -29,7 +27,7 @@
           "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href
         );
 
-      //manages mobile nav
+      //manages mobile nav - from W3Schools
       function myFunction() {
         var x = document.getElementById("myTopnav");
         if (x.className === "topnav") {

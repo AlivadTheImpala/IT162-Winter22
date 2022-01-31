@@ -1,5 +1,5 @@
-<?php include "includes/header.php";?>
-
-<h1>AIA</h1>
-    
- <?php include "includes/footer.php";?>
+<?php include "includes/header.php"; ?>
+  
+    <h2 class="pageID">Template</h2>
+     
+<?php include "includes/footer.php"; ?>
