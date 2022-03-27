@@ -1,10 +1,7 @@
 <?php include "includes/header.php"; ?>
-<!-- header in header.php>
-      <!-- Section for Left Column -->
-      <section>
-        <h2 class="pageID">Bienvenido! Welcome!</h2>
-
-        <!-- Three images placed -->
+<!-- header in header.php -->
+      
+<!-- Three images placed -->
         <img
           src="images/greece.jpeg"
           class="desktop"

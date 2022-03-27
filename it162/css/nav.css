@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* Remove margins and padding from the list, and add a black background color */
+/* Remove margins and padding from the list, and add a seafom blue background color */
 ul.topnav {
   list-style-type: none;
   margin: 0;

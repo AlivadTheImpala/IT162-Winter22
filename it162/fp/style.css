@@ -1,0 +1,266 @@
+/************************
+*****   basic layout   *****
+************************/
+
+html {
+  box-sizing: border-box;
+  font-size: 18px;
+  background-color: #eff5ef;
+}
+img {
+  display: block;
+  width: 100%;
+  border-radius: 3em;
+  /* object-fit: cover; */
+}
+.logo {
+  width: 3em;
+  height: 3em;
+}
+section {
+  padding: 2.5em 2em;
+}
+.section-title {
+  margin: 0.5em;
+}
+footer {
+  margin: 0;
+  padding: 0.2em;
+}
+
+/**** basic color styles ****/
+.top-header,
+.welcome,
+footer {
+  background: #eff5ef;
+  color: #262f2b;
+}
+
+.get-involved {
+  background: #262f2b;
+  color: #eff5ef;
+}
+
+/************************
+*****   typography   *****
+************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  margin: 0;
+}
+
+h2 {
+  line-height: 1;
+  font-size: 2.5rem;
+  font-family: "Abhaya Libre", serif;
+  text-transform: uppercase;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/************************
+*****   navigation   *****
+************************/
+
+.top-header {
+  padding-top: 0.5em;
+  padding-bottom: 0.3em;
+}
+
+nav li {
+  list-style: none;
+}
+nav a {
+  color: #262f2b;
+  text-decoration: none;
+  font-size: 1.15;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3em 2em;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4em;
+}
+.nav-link {
+  transition: 0.55s;
+  padding: 0.2em 0.5em;
+}
+.nav-link:hover,
+.nav-link:focus {
+  border-radius: 0.45em;
+  background-color: #a1baa1;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 1.2em;
+  height: 0.2em;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: #262f2b;
+}
+/**********************************
+*****   Responsive Nav Queries   *****
+***********************************/
+@media (max-width: 688px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 4em;
+    gap: 0;
+    flex-direction: column;
+    background-color: #eff5ef;
+    border-radius: 0.6em 0 0 0.6em;
+    text-align: center;
+    transition: 0.4s;
+  }
+  .nav-item {
+    margin: 0.88em 0;
+  }
+  .nav-menu.active {
+    right: 0;
+    width: 10em;
+  }
+}
+
+/************************
+*****   buttons   *****
+************************/
+.btn-group {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.btn {
+  text-decoration: none;
+  padding: 0.5em 1em;
+  display: inline-block;
+  max-width: 5em;
+  margin: 0.5em;
+  color: black;
+  text-align: center;
+  border-radius: 0.5em;
+}
+.btn-primary {
+  background: #05c1ff;
+}
+
+.btn-secondary {
+  border: 0.15em solid #eff5ef;
+  color: #eff5ef;
+}
+
+/************************
+*****   homepage   *****
+************************/
+
+section.hero {
+  background-color: rgb(68, 78, 78);
+  background-image: url(images/cover.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 3vh 1em;
+  color: #eff5ef;
+}
+
+.welcome,
+.get-involved {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+}
+
+/************************
+*****   media queries   *****
+************************/
+
+@media all and (min-width: 750px) {
+  section {
+    padding: 0 0em;
+  }
+  h2.section-title.hero {
+    font-size: 3rem;
+  }
+  section.hero {
+    padding: 15vh;
+  }
+  .welcome,
+  .get-involved {
+    flex-direction: row;
+  }
+  .leftcol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    /* margin-left: auto; */
+  }
+  .rightcol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+    text-align: right;
+    /* margin-right: auto; */
+  }
+  .leftcol,
+  .rightcol {
+    padding: 2em;
+  }
+  .btn-group {
+    justify-content: center;
+  }
+}
+
+@media all and (min-width: 879px) {
+  .section-title.main {
+    font-size: 3.5rem;
+    margin: 0.5em 2.5em 0.5em;
+  }
+  h2 {
+    font-size: 2.7em;
+  }
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Dog Oasis</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Barlow+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="top-header">
+      <nav id="nav">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              class="nav-logo"
+              src="images/logo.png"
+              alt="green dog oasis logo"
+            />
+          </a>
+        </div>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Get Involved</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Donate</a>
+          </li>
+        </ul>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+
+          <span class="bar"></span>
+
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <header>
+          <h2 class="section-title">Help Us Build Green Dog Oasis.</h2>
+        </header>
+        <div class="btn-group">
+          <a href="donate.php" class="btn btn-primary">Donate Now</a>
+          <a href="getinvolved.php" class="btn btn-secondary">Volunteer</a>
+        </div>
+      </section>
+
+      <!-------Left Col on desktop Welcome Section -------->
+      <section class="welcome">
+        <div class="leftcol">
+          <header class="welcome-txt">
+            <h2 class="section-title">Welcome To the Oasis!</h2>
+          </header>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia ad
+            est odit, dignissimos optio quas aperiam minus quis sit doloribus
+            sunt neque accusamus error nobis pariatur adipisci molestiae
+            nesciunt? Quisquam, in saepe molestiae eum rerum soluta optio
+            ratione? Suscipit quos minus placeat ea libero soluta necessitatibus
+            quam expedita aliquam labore?
+          </p>
+
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+
+        <!-------Right Col on Welcome section -------->
+        <div class="rightcol">
+          <div class="section-img">
+            <img
+              class="mobile-img"
+              src="images/kody.jpeg"
+              alt="small dog sitting on the grass, sheet metal and bricks lay behind him."
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-------Left Col on desktop Get Invovled section -------->
+      <section class="get-involved">
+        <div class="leftcol">
+          <div class="section-img">
+            <img
+              class="mobile-img"
+              src="images/jeep.jpeg"
+              alt="jeep parked in the grass "
+            />
+          </div>
+        </div>
+
+        <!-------Right Col on desktop Get Involved Section -------->
+        <div class="rightcol">
+          <header class="involved-txt">
+            <h2 class="section-title">Get Involved</h2>
+          </header>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, ab
+            numquam. Perferendis nostrum voluptatem, tempore dolorum illo
+            maiores a, sunt nesciunt delectus omnis laudantium fugiat similique,
+            numquam minima esse ullam odio. Praesentium, id magnam ratione, quos
+            eum aliquam libero nisi possimus laudantium, debitis a deserunt iure
+            vitae minima hic alias.
+          </p>
+
+          <a href="#" class="btn btn-secondary">Contact Us</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <small>
+          &copy; 2022-<?=date("Y")?>
+          by Brandon Davila, All Rights Reserved ~
+          <a id="html-checker" href="#">Check HTML</a> ~
+          <a id="css-checker" href="#">Check CSS</a>
+        </small>
+      </p>
+    </footer>
+
+    <script>
+      //https://tinyurl.com/dynamic-html-checker
+      document
+        .getElementById("html-checker")
+        .setAttribute(
+          "href",
+          "https://validator.w3.org/nu/?doc=" + location.href
+        );
+      document
+        .getElementById("css-checker")
+        .setAttribute(
+          "href",
+          "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href
+        );
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+
+      document.querySelectorAll("nav-link").forEach((n) =>
+        n.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+        })
+      );
+    </script>
+  </body>
+</html>
